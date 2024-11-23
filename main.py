@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
 from app.results_routes import router
-
+import sys
 app = FastAPI()
 
 app.include_router(router)

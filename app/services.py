@@ -1,5 +1,3 @@
-# app/services.py
-
 import os
 import json
 import logging
@@ -54,8 +52,8 @@ def calculate_averages(results: list[BenchmarkingResult]) -> dict:
 def filter_results_by_time(results: list[BenchmarkingResult],
                            start_time: str, end_time: str) -> list[BenchmarkingResult]:
     try:
-        start_datetime = datetime.fromisoformat(start_time)
-        end_datetime = datetime.fromisoformat(end_time)
+        start_datetime = datetime.strptime(start_time, "%Y-%m-%d %H:%M:%S")
+        end_datetime = datetime.strptime(end_time, "%Y-%m-%d %H:%M:%S")
     except ValueError as e:
         logger.error(f"Invalid date format: {e}")
         raise HTTPException(status_code=400, detail="Invalid date format")
