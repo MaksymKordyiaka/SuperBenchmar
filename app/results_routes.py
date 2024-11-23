@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Path
-from services import load_data, calculate_averages, filter_results_by_time
+from app.services import load_data, calculate_averages, filter_results_by_time
 
 router = APIRouter()
 
