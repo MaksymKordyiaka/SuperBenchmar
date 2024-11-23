@@ -1,5 +1,3 @@
-# app/results_routes
-
 from fastapi import APIRouter
 from app.services import load_data, calculate_averages, filter_results_by_time
 

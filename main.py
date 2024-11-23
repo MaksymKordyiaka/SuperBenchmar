@@ -1,5 +1,3 @@
-# main.py
-
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
 from app.results_routes import router
